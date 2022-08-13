@@ -4,6 +4,18 @@ using Entitas;
 
 namespace Game
 {
+
+    [GameContext]
+    [Serializable]
+    public class BattleEntityTypeComponent : IComponent
+    {
+        public BattleEntityType Type;
+        public void SetValue(BattleEntityType newValue)
+        {
+            this.Type = newValue;
+        }
+    }
+
     // Components
     [GameContext][Serializable]
     public class PositionComponent : IComponent
