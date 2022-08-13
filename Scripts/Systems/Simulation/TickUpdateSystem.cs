@@ -4,7 +4,7 @@ using Entitas;
 
 namespace Game
 {
-
+    [GameFeature]
     public class TickInitializeSystem : IInitializeSystem
     {
         public TickInitializeSystem()
@@ -14,13 +14,13 @@ namespace Game
 
         public void Initialize()
         {
-            Console.WriteLine(string.Format("Init system tick Init"));
+            GD.Print(string.Format("Init system tick Init"));
             float secondsSinceStartup = GetRealTimeSinceStartup();
             var tick = Contexts.sharedInstance.GetContext<GameContext>().CreateEntity();
             int currentTick = (int)(secondsSinceStartup * 60);
             tick.AddComponent<CurrentTickComponent>().SetValue(currentTick);
 
-            Console.WriteLine(string.Format("Starting Game at {0}", currentTick));
+            GD.Print(string.Format("Starting Game at {0}", currentTick));
         }
 
         private float GetRealTimeSinceStartup()
@@ -32,6 +32,7 @@ namespace Game
         }
     }
 
+    [GameFeature]
     public class TickUpdateSystem : IExecuteSystem
     {
         private Context _context;
@@ -43,7 +44,6 @@ namespace Game
 
         public void Execute()
         {
-            GD.Print(string.Format("updating system tick update"));
             CurrentTickComponent currentTickComponent = _context.GetUnique<CurrentTickComponent>();
             if (currentTickComponent != null)
             {
@@ -57,7 +57,6 @@ namespace Game
                     currentTick++;
                     currentTickComponent.SetValue(currentTick);
                 }
-                GD.Print(string.Format("updating tick to {0}", currentTick));
 
             }
         }

@@ -17,17 +17,15 @@ namespace Game
         // Called when the node enters the scene tree for the first time.
         public override void _Ready()
         {
-            GD.Print(string.Format("start game"));
 
             _contexts = Contexts.sharedInstance;
 
             // init systems, auto collect matched systems, no manual Systems.Add(ISystem) required
             
-            _feature = new Feature(null);
-            if(_feature != null)
+            _feature = new Feature("Game");
+            if (_feature != null)
             {
-                GD.Print(string.Format("init feature"));
-
+                GD.Print("Initializing feature");
                 _feature.Initialize();
             }
         }
