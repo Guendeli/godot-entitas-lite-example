@@ -67,7 +67,7 @@ namespace Game
     [Serializable]
     public class ViewComponent : IComponent
     {
-        public Node2D View;
+        public Node View;
     }
 
 
@@ -80,6 +80,18 @@ namespace Game
         public void SetValue(int newValue)
         {
             this.Tick = newValue;
+        }
+    }
+
+    [GameContext]
+    [Serializable]
+    public class CurrentSceneComponent : IUnique, IComponent
+    {
+        public Node Scene;
+
+        public void SetValue(Node newValue)
+        {
+            this.Scene = newValue;
         }
     }
 

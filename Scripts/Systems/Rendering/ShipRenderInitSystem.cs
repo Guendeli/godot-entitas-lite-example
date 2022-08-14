@@ -13,6 +13,7 @@ namespace Game
 
         public ShipRenderInitSystem()
         {
+            _context = Contexts.sharedInstance.GetContext<GameContext>();
             monitors += Context<GameContext>.AllOf<ShipComponent>().OnAdded(Process);
         }
 
@@ -21,14 +22,17 @@ namespace Game
            foreach(Entity shipEntity in entities)
             {
                 //Create its visual representation(View)
-                GD.Print("Loading ship model");
                 Node2D node = GD.Load<PackedScene>(SHIP_ROOT).Instance() as Node2D;
                 if (node != null)
                 {
 
-                    GD.Print(node.Transform.x);
-                    //var view = node.Instance();
+                    var currentScene = _context.GetUnique<CurrentSceneComponent>();
+                    if (currentScene == null)
+                        continue;
 
+                    currentScene.Scene.AddChild(node);
+                    GD.Print(string.Format("Loading ship model at {0}", node.Transform.x));
+                   
                     //shipEntity.AddView(view);
                     //Renderer renderer = view.GetComponentInChildren<Renderer>();
                     //if (renderer != null)

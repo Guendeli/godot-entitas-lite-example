@@ -10,18 +10,16 @@ namespace Game
         private Contexts _contexts;
         private Systems _feature;
 
-        // Declare member variables here. Examples:
-        // private int a = 2;
-        // private string b = "text";
-
-        // Called when the node enters the scene tree for the first time.
+        
         public override void _Ready()
         {
 
             _contexts = Contexts.sharedInstance;
 
-            // init systems, auto collect matched systems, no manual Systems.Add(ISystem) required
-            
+            var rootScene = GetTree().Root;
+            var sceneEntity = _contexts.GetContext<GameContext>().CreateEntity();
+            sceneEntity.Add<CurrentSceneComponent>().SetValue(rootScene);
+
             _feature = new Feature("Game");
             if (_feature != null)
             {

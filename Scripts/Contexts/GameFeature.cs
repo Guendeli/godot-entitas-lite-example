@@ -4,8 +4,11 @@ using Entitas;
 
 namespace Game
 {
-    public class GameFeature : FeatureAttribute { public GameFeature(string name = "Game", int prior = 0) : base(name, 0) {
+    public class GameFeature : FeatureAttribute { 
+        public GameFeature(string name = "Game", int prior = 0) : base(name, 0) {
         
+            // init systems
+            AnimationNodeAdd2()
         } 
     }
 

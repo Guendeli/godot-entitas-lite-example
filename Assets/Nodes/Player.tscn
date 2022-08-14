@@ -6,7 +6,6 @@
 position = Vector2( -10, 0 )
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]
-position = Vector2( 514, 324 )
 rotation = -0.032378
-scale = Vector2( 150, 150 )
+scale = Vector2( 20, 20 )
 mesh = SubResource( 1 )
