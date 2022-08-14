@@ -4,12 +4,24 @@ using Entitas;
 
 namespace Game
 {
-    public class GameFeature : FeatureAttribute { 
-        public GameFeature(string name = "Game", int prior = 0) : base(name, 0) {
-        
-            // init systems
-            AnimationNodeAdd2()
-        } 
+
+    public class GameFeature : Feature { 
+        public GameFeature(string name) : base("Game"){
+
+            // Init Systems
+            Add(new TickInitializeSystem());
+            Add(new TickUpdateSystem());
+            Add(new ShipInitSystem());
+            // Input Systems
+
+
+            // Render Systems
+            Add(new ShipRenderInitSystem());
+
+
+            // cleanup systems
+            Add(new EntityDisposeSystem());
+        }
     }
 
 }

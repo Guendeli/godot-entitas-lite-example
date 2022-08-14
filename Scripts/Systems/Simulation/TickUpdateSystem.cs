@@ -4,7 +4,6 @@ using Entitas;
 
 namespace Game
 {
-    [GameFeature]
     public class TickInitializeSystem : IInitializeSystem
     {
         public TickInitializeSystem()
@@ -32,7 +31,6 @@ namespace Game
         }
     }
 
-    [GameFeature]
     public class TickUpdateSystem : IExecuteSystem
     {
         private Context _context;

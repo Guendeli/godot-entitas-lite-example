@@ -5,7 +5,6 @@ using System.Collections.Generic;
 
 namespace Game
 {
-    [GameFeature]
     public class ShipRenderInitSystem : ReactiveSystem
     {
         private Context _context;

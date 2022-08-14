@@ -20,7 +20,7 @@ namespace Game
             var sceneEntity = _contexts.GetContext<GameContext>().CreateEntity();
             sceneEntity.Add<CurrentSceneComponent>().SetValue(rootScene);
 
-            _feature = new Feature("Game");
+            _feature = new GameFeature("Game");
             if (_feature != null)
             {
                 GD.Print("Initializing feature");
@@ -28,7 +28,6 @@ namespace Game
             }
         }
 
-        //  // Called every frame. 'delta' is the elapsed time since the previous frame.
           public override void _Process(float delta)
           {
             if(_feature != null)

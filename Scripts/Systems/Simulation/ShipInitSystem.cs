@@ -5,7 +5,6 @@ using Entitas;
 
 namespace Game
 {
-    [GameFeature]
     public class ShipInitSystem : IInitializeSystem
     {
         private readonly Context context;
