@@ -1,5 +1,5 @@
 
-namespace Entitas
+namespace GEntitas
 {
 	/// using ComponentIndex<T> to Component->Index mapping
 	public partial class Entity

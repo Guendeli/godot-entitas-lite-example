@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Entitas
+namespace GEntitas
 {
 	/// Collect all matched System in current domain, then add them to Feature ordered by priority
 	public class FeatureHelper

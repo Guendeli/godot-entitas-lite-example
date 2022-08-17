@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Entitas.Utils;
+using GEntitas.Utils;
 
-namespace Entitas {
+namespace GEntitas {
 
     public static class EntitasCache {
 

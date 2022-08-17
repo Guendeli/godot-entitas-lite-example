@@ -1,4 +1,4 @@
-﻿namespace Entitas {
+﻿namespace GEntitas {
 
     /// Implement this interface if you want to create a system which should be
     /// executed every frame.

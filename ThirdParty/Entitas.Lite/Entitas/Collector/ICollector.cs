@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Entitas {
+namespace GEntitas {
 
     public interface ICollector {
 

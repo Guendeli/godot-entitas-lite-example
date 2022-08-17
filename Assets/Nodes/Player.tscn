@@ -3,9 +3,7 @@
 [sub_resource type="SphereMesh" id=1]
 
 [node name="Node2D" type="Node2D"]
-position = Vector2( -10, 0 )
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
-rotation = -0.032378
+[node name="MeshInstance" type="MeshInstance2D" parent="."]
 scale = Vector2( 20, 20 )
 mesh = SubResource( 1 )

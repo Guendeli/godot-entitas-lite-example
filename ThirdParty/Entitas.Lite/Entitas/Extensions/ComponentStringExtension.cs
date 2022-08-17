@@ -1,4 +1,4 @@
-namespace Entitas {
+namespace GEntitas {
 
     public static class ComponentStringExtension {
 

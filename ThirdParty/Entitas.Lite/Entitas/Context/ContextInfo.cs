@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Entitas {
+namespace GEntitas {
 
 	public class ContextInfo {
 

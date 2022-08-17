@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Entitas {
+namespace GEntitas {
 
     /// A ReactiveSystem calls Execute(entities) if there were changes based on
     /// the specified Collector and will only pass in changed entities.

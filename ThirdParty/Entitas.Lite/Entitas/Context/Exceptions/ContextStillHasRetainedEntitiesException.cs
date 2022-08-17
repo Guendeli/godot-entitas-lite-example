@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace Entitas {
+namespace GEntitas {
 
     public class ContextStillHasRetainedEntitiesException : EntitasException {
 

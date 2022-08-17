@@ -1,5 +1,5 @@
 ﻿
-namespace Entitas
+namespace GEntitas
 {
 	public static class Context<C> where C : ContextAttribute
 	{

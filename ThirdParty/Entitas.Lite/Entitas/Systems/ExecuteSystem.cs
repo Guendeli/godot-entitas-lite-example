@@ -1,5 +1,5 @@
 ﻿
-namespace Entitas
+namespace GEntitas
 {
 	/// Execute on each entity which matches
 	public abstract class ExecuteSystem : IExecuteSystem

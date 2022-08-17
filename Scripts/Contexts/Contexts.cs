@@ -1,6 +1,6 @@
 using Godot;
 using System;
-using Entitas;
+using GEntitas;
 
 namespace Game
 {

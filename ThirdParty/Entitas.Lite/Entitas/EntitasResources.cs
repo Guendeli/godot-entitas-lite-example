@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace Entitas {
+namespace GEntitas {
 
     public static class EntitasResources {
 

@@ -2,7 +2,7 @@
 using System.Text;
 using System.Linq;
 
-namespace Entitas {
+namespace GEntitas {
 
     /// A Collector can observe one or more groups from the same context
     /// and collects changed entities based on the specified groupEvent.

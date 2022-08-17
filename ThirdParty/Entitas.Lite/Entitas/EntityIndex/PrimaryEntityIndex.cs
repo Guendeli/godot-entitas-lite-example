@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Entitas {
+namespace GEntitas {
 
     public class PrimaryEntityIndex<TKey> : AbstractEntityIndex<TKey> {
 

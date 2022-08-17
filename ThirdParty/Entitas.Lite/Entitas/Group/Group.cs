@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 
-namespace Entitas {
+namespace GEntitas {
 
     /// Use context.GetGroup(matcher) to get a group of entities which match
     /// the specified matcher. Calling context.GetGroup(matcher) with the

@@ -1,6 +1,6 @@
 using Godot;
 using System;
-using Entitas;
+using GEntitas;
 
 namespace Game
 {
@@ -32,8 +32,8 @@ namespace Game
     [Serializable]
     public class RotationComponent : IComponent
     {
-        public Quat Rotation;
-        public void SetValue(Quat newValue)
+        public float Rotation;
+        public void SetValue(float newValue)
         {
             this.Rotation = newValue;
         }
@@ -68,6 +68,11 @@ namespace Game
     public class ViewComponent : IComponent
     {
         public Node View;
+
+        public void SetValue(Node newValue)
+        {
+            this.View = newValue;
+        }
     }
 
 

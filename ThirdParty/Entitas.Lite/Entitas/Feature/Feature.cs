@@ -1,5 +1,5 @@
 
-namespace Entitas
+namespace GEntitas
 {
 	/// Simple Systems with automatic collections. Nested is not supported
 	public class Feature : Systems

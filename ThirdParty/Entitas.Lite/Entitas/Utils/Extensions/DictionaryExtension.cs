@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Entitas.Utils {
+namespace GEntitas.Utils {
 
     public static class DictionaryExtension {
 

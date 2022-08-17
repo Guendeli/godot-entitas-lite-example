@@ -1,6 +1,6 @@
 using System;
 
-namespace Entitas {
+namespace GEntitas {
 
     public class MatcherException : Exception {
         public MatcherException(int indices) : base(

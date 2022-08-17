@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 
-namespace Entitas.Utils {
+namespace GEntitas.Utils {
 
     public class Preferences {
 

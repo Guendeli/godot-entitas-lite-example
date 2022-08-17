@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Entitas
+namespace GEntitas
 {
 	/// A singleton Contexts, with name-Context lookup, and a defaultContext
 	public class Contexts : IContexts

@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Entitas.Utils;
+using GEntitas.Utils;
 
-namespace Entitas {
+namespace GEntitas {
 
     /// Use context.CreateEntity() to create a new entity and
     /// entity.Destroy() to destroy it.

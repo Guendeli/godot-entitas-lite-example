@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-using Entitas;
+using GEntitas;
 
 namespace Game
 {
@@ -21,7 +21,7 @@ namespace Game
 
             // adding common components
             shipEntity.AddComponent<PositionComponent>().SetValue(Vector2.Zero);
-            shipEntity.AddComponent<RotationComponent>().SetValue(Quat.Identity);
+            shipEntity.AddComponent<RotationComponent>().SetValue(0);
             shipEntity.AddComponent<ShipComponent>().SetValue(0);
             shipEntity.AddComponent<AccelerationComponent>().SetValue(1.5f);
             shipEntity.AddComponent<TorqueComponent>().SetValue(15f);

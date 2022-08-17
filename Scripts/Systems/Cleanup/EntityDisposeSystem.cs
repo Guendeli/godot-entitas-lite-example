@@ -1,17 +1,19 @@
 using Godot;
 using System;
-using Entitas;
+using GEntitas;
 namespace Game
 {
     public class EntityDisposeSystem : IExecuteSystem
     {
+        private IGroup _group;
         public EntityDisposeSystem()
         {
+            _group = Context<GameContext>.AllOf<DisposeComponent>();
         }
 
         public void Execute()
         {
-            Entity[] entities = Context<GameContext>.AllOf<DisposeComponent>().GetEntities();
+            Entity[] entities = _group.GetEntities();
 
             for (int i = 0; i < entities.Length; i++)
             {

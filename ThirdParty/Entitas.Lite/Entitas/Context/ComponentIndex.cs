@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Entitas
+namespace GEntitas
 {
 	/// Cache Component's indices in all Contexts
 	public class ComponentIndex<T> where T : IComponent

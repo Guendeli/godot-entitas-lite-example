@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Entitas {
+namespace GEntitas {
 
     /// Base exception used by Entitas.
     public class EntitasException : Exception {

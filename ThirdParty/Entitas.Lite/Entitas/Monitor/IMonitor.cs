@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Entitas {
+namespace GEntitas {
 
 	public delegate bool MonitorFilter(Entity entity);
 	public delegate void MonitorProcessor(List<Entity> entities);

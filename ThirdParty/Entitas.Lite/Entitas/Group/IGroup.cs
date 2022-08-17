@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 
-namespace Entitas {
+namespace GEntitas {
 
     public delegate void GroupChanged(IGroup group, Entity entity, int index, IComponent component);
     public delegate void GroupUpdated(IGroup group, Entity entity, int index, IComponent previousComponent, IComponent newComponent);

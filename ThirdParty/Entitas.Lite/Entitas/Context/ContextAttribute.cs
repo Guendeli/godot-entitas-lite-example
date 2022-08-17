@@ -1,7 +1,7 @@
 using System;
-using Entitas.Utils;
+using GEntitas.Utils;
 
-namespace Entitas
+namespace GEntitas
 {
 	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct, AllowMultiple = true)]
 	public abstract class ContextAttribute : Attribute {

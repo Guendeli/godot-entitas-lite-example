@@ -1,6 +1,6 @@
 using Godot;
 using System;
-using Entitas;
+using GEntitas;
 
 namespace Game
 {
@@ -19,7 +19,7 @@ namespace Game
             var rootScene = GetTree().Root;
             var sceneEntity = _contexts.GetContext<GameContext>().CreateEntity();
             sceneEntity.Add<CurrentSceneComponent>().SetValue(rootScene);
-
+            
             _feature = new GameFeature("Game");
             if (_feature != null)
             {

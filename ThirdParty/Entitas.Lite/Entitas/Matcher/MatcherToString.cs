@@ -1,6 +1,6 @@
 using System.Text;
 
-namespace Entitas {
+namespace GEntitas {
 
     public partial class Matcher {
 

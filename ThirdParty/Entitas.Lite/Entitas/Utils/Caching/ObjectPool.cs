@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Entitas.Utils {
+namespace GEntitas.Utils {
 
     public class ObjectPool<T> {
 

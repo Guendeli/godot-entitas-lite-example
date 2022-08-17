@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
-namespace Entitas {
+namespace GEntitas {
 
     /// Systems provide a convenient way to group systems.
     /// You can add IInitializeSystem, IExecuteSystem, ICleanupSystem,

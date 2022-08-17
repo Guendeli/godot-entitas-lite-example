@@ -1,6 +1,6 @@
 using System;
 
-namespace Entitas {
+namespace GEntitas {
 
     /// Implement this interface if you want to create a component which
     /// you can add to an entity.

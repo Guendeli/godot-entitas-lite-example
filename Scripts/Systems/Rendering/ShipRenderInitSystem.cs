@@ -1,6 +1,6 @@
 using Godot;
 using System;
-using Entitas;
+using GEntitas;
 using System.Collections.Generic;
 
 namespace Game
@@ -30,15 +30,11 @@ namespace Game
                         continue;
 
                     currentScene.Scene.AddChild(node);
-                    GD.Print(string.Format("Loading ship model at {0}", node.Transform.x));
+                    
+                    GD.Print(string.Format("Loading ship model at {0}", node));
                    
-                    //shipEntity.AddView(view);
-                    //Renderer renderer = view.GetComponentInChildren<Renderer>();
-                    //if (renderer != null)
-                    //{
-                    //    Bounds bounds = renderer.bounds;
-                    //    shipEntity.AddBounds(bounds);
-                    //}
+                    shipEntity.AddComponent<ViewComponent>().SetValue(node);
+                   
                 }
             }
         }
@@ -46,37 +42,3 @@ namespace Game
 }
 
 
-//public ShipRenderInitSystem(Contexts context) : base(context.game)
-//{
-//    _context = context.game;
-//}
-
-//protected override void Execute(List<GameEntity> entities)
-//{
-//    foreach (GameEntity shipEntity in entities)
-//    {
-//        // Create its visual representation (View)
-//        GameObject view = GameObject.Instantiate(Resources.Load<GameObject>(string.Format(SHIP_ROOT, shipEntity.ship.Id)));
-//        if (view != null)
-//        {
-//            shipEntity.AddView(view);
-//            Renderer renderer = view.GetComponentInChildren<Renderer>();
-//            if (renderer != null)
-//            {
-//                Bounds bounds = renderer.bounds;
-//                shipEntity.AddBounds(bounds);
-//            }
-//        }
-
-//    }
-//}
-
-//protected override bool Filter(GameEntity entity)
-//{
-//    return entity.hasShip;
-//}
-
-//protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
-//{
-//    return context.CreateCollector(GameMatcher.Ship);
-//}
