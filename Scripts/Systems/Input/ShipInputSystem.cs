@@ -66,12 +66,12 @@ namespace Game
         private void ProcessAcceleration(Entity shipEntity, float value)
         {
             float currentAcceleration = shipEntity.GetComponent<AccelerationComponent>().Acceleration;
-            if(Mathf.Abs(currentAcceleration) <= 20f)
+            if(Mathf.Abs(currentAcceleration) <= 60f)
             {
-                currentAcceleration += value * (5f / 60f);
+                currentAcceleration += value * (10f / 60f);
             } else
             {
-                currentAcceleration = 20f * value;
+                currentAcceleration = 60f * value;
             }
 
             if(currentAcceleration <= 0)
