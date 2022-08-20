@@ -24,7 +24,7 @@ namespace Game
                 float rotation = movableEntity.GetComponent<RotationComponent>().Rotation;
                 // get the forward vector
 
-                Vector2 forward = new Vector2(Mathf.Cos(rotation + Mathf.Deg2Rad(90)), Mathf.Sin(Mathf.Deg2Rad(90)));
+                Vector2 forward = new Vector2(Mathf.Cos(rotation + Mathf.Deg2Rad(90)), Mathf.Sin(rotation + Mathf.Deg2Rad(90)));
 
                 Vector2 delta = (forward * acceleration) / 60f;
                 movableEntity.GetComponent<PositionComponent>().Position = currentPosition + delta;

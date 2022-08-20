@@ -23,8 +23,8 @@ namespace Game
             shipEntity.AddComponent<PositionComponent>().SetValue(new Vector2(512,300));
             shipEntity.AddComponent<RotationComponent>().SetValue(0);
             shipEntity.AddComponent<ShipComponent>().SetValue(0);
-            shipEntity.AddComponent<AccelerationComponent>().SetValue(10f);
-            shipEntity.AddComponent<TorqueComponent>().SetValue(2f);
+            shipEntity.AddComponent<AccelerationComponent>().SetValue(0);
+            shipEntity.AddComponent<TorqueComponent>().SetValue(0);
             // adding combat specific components
             shipEntity.AddComponent<BattleEntityTypeComponent>().SetValue(BattleEntityType.Friendly);
             shipEntity.AddComponent<TurretComponent>().SetValue(30);

@@ -9,4 +9,12 @@ namespace Game
         Projectile,
         Hostile
     }
+
+    public enum GameInputs
+    {
+        Accelerate,
+        Decelerate,
+        ClockWise,
+        AntiClockwise
+    }
 }

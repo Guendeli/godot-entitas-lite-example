@@ -1,9 +1,11 @@
 [gd_scene load_steps=2 format=2]
 
-[sub_resource type="QuadMesh" id=1]
+[sub_resource type="StreamTexture" id=1]
+flags = 4
+load_path = "res://.import/ship (3).png-0e676cf4a8a6e5b99a21e0d1e1882e32.stex"
 
 [node name="Node2D" type="Node2D"]
 
-[node name="MeshInstance" type="MeshInstance2D" parent="."]
-scale = Vector2( 40, 40 )
-mesh = SubResource( 1 )
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.5, 0.5 )
+texture = SubResource( 1 )

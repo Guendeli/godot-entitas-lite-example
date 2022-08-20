@@ -13,7 +13,7 @@ namespace Game
             Add(new TickUpdateSystem());
             Add(new ShipInitSystem());
             // Input Systems
-
+            Add(new ShipInputSystem());
             // Simulation Systems
             Add(new MovementSystem());
 

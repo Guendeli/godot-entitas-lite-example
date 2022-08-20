@@ -37,6 +37,33 @@ namespace Game
             }
            
           }
+
+        public override void _Input(InputEvent inputEvent)
+        {
+            if (inputEvent.IsAction("ui_up"))
+            {
+                var input = _contexts.GetContext<GameContext>().CreateEntity();
+                input.Add<InputComponent>().SetValue(GameInputs.Accelerate);
+            }
+
+            if (inputEvent.IsAction("ui_down"))
+            {
+                var input = _contexts.GetContext<GameContext>().CreateEntity();
+                input.Add<InputComponent>().SetValue(GameInputs.Decelerate);
+            }
+
+            if (inputEvent.IsAction("ui_right"))
+            {
+                var input = _contexts.GetContext<GameContext>().CreateEntity();
+                input.Add<InputComponent>().SetValue(GameInputs.ClockWise);
+            }
+
+            if (inputEvent.IsAction("ui_left"))
+            {
+                var input = _contexts.GetContext<GameContext>().CreateEntity();
+                input.Add<InputComponent>().SetValue(GameInputs.AntiClockwise);
+            }
+        }
     }
 }
 

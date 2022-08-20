@@ -16,6 +16,17 @@ namespace Game
         }
     }
 
+    [GameContext]
+    [Serializable]
+    public class InputComponent : IComponent
+    {
+        public GameInputs Type;
+        public void SetValue(GameInputs newValue)
+        {
+            this.Type = newValue;
+        }
+    }
+
     // Components
     [GameContext][Serializable]
     public class PositionComponent : IComponent
