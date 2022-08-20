@@ -1,11 +1,23 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [sub_resource type="StreamTexture" id=1]
 flags = 4
 load_path = "res://.import/ship (3).png-0e676cf4a8a6e5b99a21e0d1e1882e32.stex"
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="StreamTexture" id=2]
+flags = 4
+load_path = "res://.import/cannon.png-0347e491d8f91ff2daaa9c1f1f20e5b0.stex"
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="ShipRoot" type="Node2D"]
+
+[node name="ShipSprite" type="Sprite" parent="."]
 scale = Vector2( 0.5, 0.5 )
 texture = SubResource( 1 )
+
+[node name="CannonContainer" type="Node2D" parent="."]
+position = Vector2( 0, 15 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="CannonSprite" type="Sprite" parent="CannonContainer"]
+rotation = 1.5708
+texture = SubResource( 2 )

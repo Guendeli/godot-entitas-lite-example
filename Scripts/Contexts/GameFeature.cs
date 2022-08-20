@@ -1,5 +1,3 @@
-using Godot;
-using System;
 using GEntitas;
 
 namespace Game
@@ -17,7 +15,7 @@ namespace Game
             // Simulation Systems
             Add(new MovementSystem());
 
-
+            Add(new ShipDecelerationSystem());
             // Render Systems
             Add(new ShipRenderInitSystem());
             Add(new TransformApplySystem());

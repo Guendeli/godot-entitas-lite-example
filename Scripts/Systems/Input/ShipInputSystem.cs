@@ -32,9 +32,7 @@ namespace Game
                 if (!shipEntity.HasComponent<AccelerationComponent>())
                     continue;
 
-                float acceleration = 0;
-                float torque = 0;
-
+               
 
                 GameInputs inputType = inputEntity.GetComponent<InputComponent>().Type;
 
@@ -68,7 +66,7 @@ namespace Game
             float currentAcceleration = shipEntity.GetComponent<AccelerationComponent>().Acceleration;
             if(Mathf.Abs(currentAcceleration) <= 60f)
             {
-                currentAcceleration += value * (10f / 60f);
+                currentAcceleration += value * (30f / 60f);
             } else
             {
                 currentAcceleration = 60f * value;
