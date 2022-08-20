@@ -1,9 +1,9 @@
 [gd_scene load_steps=2 format=2]
 
-[sub_resource type="SphereMesh" id=1]
+[sub_resource type="QuadMesh" id=1]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="MeshInstance" type="MeshInstance2D" parent="."]
-scale = Vector2( 20, 20 )
+scale = Vector2( 40, 40 )
 mesh = SubResource( 1 )
