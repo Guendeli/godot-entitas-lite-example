@@ -15,6 +15,7 @@ namespace Game
         Accelerate,
         Decelerate,
         ClockWise,
-        AntiClockwise
+        AntiClockwise,
+        Shoot
     }
 }

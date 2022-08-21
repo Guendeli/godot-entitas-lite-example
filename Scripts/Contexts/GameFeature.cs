@@ -13,11 +13,14 @@ namespace Game
             // Input Systems
             Add(new ShipInputSystem());
             // Simulation Systems
-            Add(new MovementSystem());
-
+            Add(new MovementSystem()); // 
             Add(new ShipDecelerationSystem());
-            // Render Systems
+            Add(new ProjectileUpdateSystem());
+
+            // Render Systems   ProjectileRenderInitSystem
             Add(new ShipRenderInitSystem());
+            Add(new ProjectileRenderInitSystem());
+
             Add(new TransformApplySystem());
 
             // cleanup systems

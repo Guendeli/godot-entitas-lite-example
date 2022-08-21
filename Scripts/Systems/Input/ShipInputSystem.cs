@@ -7,16 +7,20 @@ namespace Game
 {
     public class ShipInputSystem : ReactiveSystem
     {
-        
+        private Context _context;
+
         public ShipInputSystem()
         {
+            _context = Contexts.sharedInstance.GetContext<GameContext>();
             monitors += Context<GameContext>.AllOf<InputComponent>().OnAdded(Process);
 
         }
 
         private void Process(List<Entity> entities)
         {
-            
+            CurrentTickComponent currentTickComponent = _context.GetUnique<CurrentTickComponent>();
+            int currentTick = currentTickComponent.Tick;
+
             for (int i = 0; i < entities.Count; i++)
             {
                 Entity inputEntity = entities[i];
@@ -50,7 +54,9 @@ namespace Game
                         break;
                     case GameInputs.AntiClockwise:
                         ProcessRotation(shipEntity, -1f);
-
+                        break;
+                    case GameInputs.Shoot:
+                        ProcessShooting(shipEntity, currentTick);
                         break;
                     default:
                         break;
@@ -77,6 +83,7 @@ namespace Game
                 currentAcceleration = 0; 
             }
 
+
             shipEntity.GetComponent<AccelerationComponent>().SetValue(currentAcceleration);
         }
 
@@ -96,6 +103,21 @@ namespace Game
 
         }
 
+        private void ProcessShooting(Entity shipEntity, int currentTick)
+        {
+            int lastShotTick = shipEntity.GetComponent<LastShotTickComponent>().Tick;
+            int rateOfFire = 60;
+            if(lastShotTick + rateOfFire <= currentTick)
+            {
+                Entity projectileEntity = _context.CreateEntity();
+                projectileEntity.AddComponent<BattleEntityTypeComponent>().Type = BattleEntityType.Projectile;
+                projectileEntity.AddComponent<ProjectileComponent>().SetValue(shipEntity.GetComponent<ShipComponent>().Id, currentTick + 180);
+                projectileEntity.AddComponent<AccelerationComponent>().Acceleration = 120f;
+                projectileEntity.AddComponent<PositionComponent>().SetValue(shipEntity.GetComponent<PositionComponent>().Position);
+                projectileEntity.AddComponent<RotationComponent>().SetValue(shipEntity.GetComponent<RotationComponent>().Rotation);
+
+            }
+        }
     }
 }
 

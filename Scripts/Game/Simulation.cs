@@ -63,6 +63,12 @@ namespace Game
                 var input = _contexts.GetContext<GameContext>().CreateEntity();
                 input.Add<InputComponent>().SetValue(GameInputs.AntiClockwise);
             }
+
+            if (inputEvent.IsAction("ui_accept"))
+            {
+                var input = _contexts.GetContext<GameContext>().CreateEntity();
+                input.Add<InputComponent>().SetValue(GameInputs.Shoot);
+            }
         }
     }
 }

@@ -29,6 +29,17 @@ namespace Game
 
     [GameContext]
     [Serializable]
+    public class TurretHardpointComponent : IComponent
+    {
+        public Vector2 Hardpoint; // in ticks
+        public void SetValue(Vector2 newValue)
+        {
+            this.Hardpoint = newValue;
+        }
+    }
+
+    [GameContext]
+    [Serializable]
     public class LastShotTickComponent : IComponent
     {
         public int Tick; // in ticks

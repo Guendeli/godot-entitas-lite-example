@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="StreamTexture" id=1]
+flags = 4
+load_path = "res://.import/explosion1.png-2043214dc8dbd720ea9bf5c17cb0b98d.stex"
+
+[node name="cannonBallRoot" type="Node2D"]
+
+[node name="cannonBallSpr" type="Sprite" parent="."]
+scale = Vector2( 0.1, 0.1 )
+texture = SubResource( 1 )
