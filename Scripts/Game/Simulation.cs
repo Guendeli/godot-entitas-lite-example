@@ -35,36 +35,37 @@ namespace Game
                 _feature.Execute();
                 _feature.Cleanup();
             }
+            ProcessInput();
            
           }
 
-        public override void _Input(InputEvent inputEvent)
+        public void ProcessInput()
         {
-            if (inputEvent.IsAction("ui_up"))
+            if (Input.IsActionPressed("ui_up"))
             {
                 var input = _contexts.GetContext<GameContext>().CreateEntity();
                 input.Add<InputComponent>().SetValue(GameInputs.Accelerate);
             }
 
-            if (inputEvent.IsAction("ui_down"))
+            if (Input.IsActionPressed("ui_down"))
             {
                 var input = _contexts.GetContext<GameContext>().CreateEntity();
                 input.Add<InputComponent>().SetValue(GameInputs.Decelerate);
             }
 
-            if (inputEvent.IsAction("ui_right"))
+            if (Input.IsActionPressed("ui_right"))
             {
                 var input = _contexts.GetContext<GameContext>().CreateEntity();
                 input.Add<InputComponent>().SetValue(GameInputs.ClockWise);
             }
 
-            if (inputEvent.IsAction("ui_left"))
+            if (Input.IsActionPressed("ui_left"))
             {
                 var input = _contexts.GetContext<GameContext>().CreateEntity();
                 input.Add<InputComponent>().SetValue(GameInputs.AntiClockwise);
             }
 
-            if (inputEvent.IsAction("ui_accept"))
+            if (Input.IsActionPressed("ui_accept"))
             {
                 var input = _contexts.GetContext<GameContext>().CreateEntity();
                 input.Add<InputComponent>().SetValue(GameInputs.Shoot);

@@ -90,13 +90,13 @@ namespace Game
         private void ProcessRotation(Entity shipEntity, float value)
         {
             float torque = shipEntity.GetComponent<TorqueComponent>().Torque;
-            if (Mathf.Abs(torque) <= 20f)
+            if (Mathf.Abs(torque) <= 10f)
             {
-                torque += (10f/60f) * value;
+                torque += (5f/60f) * value;
             }
             else
             {
-                torque = 20f * value;
+                torque = 10f * value;
             }
 
             shipEntity.GetComponent<TorqueComponent>().SetValue(torque);
@@ -106,7 +106,7 @@ namespace Game
         private void ProcessShooting(Entity shipEntity, int currentTick)
         {
             int lastShotTick = shipEntity.GetComponent<LastShotTickComponent>().Tick;
-            int rateOfFire = 60;
+            int rateOfFire = 30;
             if(lastShotTick + rateOfFire <= currentTick)
             {
                 Entity projectileEntity = _context.CreateEntity();
@@ -115,6 +115,8 @@ namespace Game
                 projectileEntity.AddComponent<AccelerationComponent>().Acceleration = 120f;
                 projectileEntity.AddComponent<PositionComponent>().SetValue(shipEntity.GetComponent<PositionComponent>().Position);
                 projectileEntity.AddComponent<RotationComponent>().SetValue(shipEntity.GetComponent<RotationComponent>().Rotation);
+
+                shipEntity.GetComponent<LastShotTickComponent>().Tick = currentTick;
 
             }
         }
