@@ -27,12 +27,12 @@ namespace Game
         public int HP = 100;
         public float Acceleration = 30f;
         public float MaxAcceleration = 60f;
-        public float Torque;
-        public float MaxTorque;
-        public float Drag;                  // how much the ship decelerates each tick
-        public float AngularDrag;           // same as above but for torque
-        public int Attack;
-        public int RateOfFire;              // how many ticks between each fire
-        public string PrefabRootName;       // in case designers want full control over visuals
+        public float Torque = 5f;
+        public float MaxTorque = 10f;
+        public float Drag = 0f;                  // how much the ship decelerates each tick
+        public float AngularDrag = 2.5f;           // same as above but for torque
+        public int Attack = 42;
+        public int RateOfFire = 30;              // how many ticks between each fire
+        public string PrefabRootName = "";       // in case designers want full control over visuals
     }
 }
